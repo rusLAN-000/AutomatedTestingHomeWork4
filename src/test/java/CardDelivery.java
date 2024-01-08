@@ -28,6 +28,8 @@ public class CardDelivery {
         $("[data-test-id='notification'] .notification__content")
                 .shouldHave(exactText("Встреча успешно забронирована на 11.01.2024"))
                 .shouldBe(visible);
-
+        $("[data-test-id='notification'] .notification__closer")
+                .shouldBe(visible).click();
+        Thread.sleep(10_000);
     }
 }
