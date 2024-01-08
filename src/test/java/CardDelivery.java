@@ -30,6 +30,5 @@ public class CardDelivery {
                 .shouldBe(visible);
         $("[data-test-id='notification'] .notification__closer")
                 .shouldBe(visible).click();
-        Thread.sleep(10_000);
     }
 }
