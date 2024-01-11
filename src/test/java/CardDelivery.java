@@ -15,7 +15,7 @@ public class CardDelivery {
         return LocalDate.now().plusDays(days).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));/* "-метод генерации даты" */
     }
 
-    String planingDate = generateDate(6);   /*"<- сохраняем дату в переменную planingDate"*/
+    String planingDate = generateDate(3);   /*"<- сохраняем дату в переменную planingDate"*/
 
     @Test
     void cardDeliveryDetails() throws InterruptedException {
