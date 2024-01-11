@@ -21,12 +21,12 @@ public class CardDelivery {
     void cardDeliveryDetails() throws InterruptedException {
         open("http://localhost:9999");
         SelenideElement form = $("[method=post]");
-        form.$("[data-test-id=city] input").setValue("Москва");
+        form.$("[data-test-id='city'] input").setValue("Москва");
         form.$("[data-test-id='date'] input").sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME), Keys.BACK_SPACE); // -очистка поля (дата)
-        form.$("[data-test-id=date] input").setValue(planingDate);
-        form.$("[data-test-id=name] input").setValue("Роман Николаевич");
-        form.$("[data-test-id=phone] input").setValue("+79618610000");
-        form.$("[data-test-id=agreement]").click();
+        form.$("[data-test-id='date'] input").setValue(planingDate);
+        form.$("[data-test-id='name'] input").setValue("Роман Николаевич");
+        form.$("[data-test-id='phone'] input").setValue("+79618610000");
+        form.$("[data-test-id='agreement']").click();
         form.$(byClassName("button")).click();
         $("[data-test-id='notification'] .notification__title")
                 .shouldHave(text("Успешно!"), Duration.ofSeconds(15))
